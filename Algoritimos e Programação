@@ -1,0 +1,32 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+
+int main() {
+	setlocale(LC_ALL, "Portuguese");
+
+    int escolha_1, escolha_2;
+
+    printf("Você deseja fazer login ou acessar o aplicativo antes de realizar o login?\n \t 1 - Fazer login\n \t 2 - Acessar aplicativo\n");
+    scanf("%d", &escolha_1);
+
+    printf("Você deseja solicitar um serviço de frete?\n \t1 - Sim\n \t2 - Não\n");
+    scanf("%d", &escolha_2);
+    
+    if (escolha_2 == 1) {
+        if (escolha_1 == 1) {
+            printf("Informe os dados do seu serviço, por favor.");
+        }
+        else {
+            printf("Por favor, faça o login antes de prosseguir.");
+        }
+    }
+    else {
+        printf("Ok, faça uma solicitação assim que precisar.");
+    }
+
+    getchar();
+    return 0;
+    
+}
